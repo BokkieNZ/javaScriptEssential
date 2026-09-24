@@ -33,9 +33,17 @@ function toggleTask(index) {
 }
 
 function clearCompletedTasks() {
+    debugger;
     tasks = tasks.filter(task => !task.completed);
+    displayTasks();
+}
+
+function clearAllTasks() {
+    debugger;
+    tasks.length = 0;
     displayTasks();
 }
 
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+clearAllBtn.addEventListener("click", clearAllTasks);
